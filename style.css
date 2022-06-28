@@ -4,6 +4,7 @@ height: 100%;
 
 body {
 background-image: url("background.jpg");
+background-attachment: fixed;
 font: 400 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
 color: #000;
 background-color: #000;
