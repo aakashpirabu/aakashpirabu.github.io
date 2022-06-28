@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WORK IN PROGRESS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div id="content">
+    <h1 id="typed">
+    <a href="https://github.com/AnnikaV9"><img src="icons/github.png" style="width:32px" align="right" hspace="5"></a>
+    <a href="https://www.linkedin.com/in/aakash-pirabu-8976aa243"><img src="icons/linkedin.png" style="width:32px" align="right" hspace="5"></a>
+    <a href="mailto:aakash.pirabu.0@gmail.com"><img src="icons/mail.png" style="width:32px" align="right" hspace="5"></a></h1>
+    <div id="faded">
+    <p>This will eventually become a pdf or html resume</p>
+    <br /><br /><br />
+    <a href="homepage.html"><h3>Home</h3></a>
+    </div>
+    </div>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        var i = 0;
+        var txt = "Resume";
+        var speed = 50;
+        function typeWriter() {
+            if (i < txt.length) {
+                document.getElementById("typed").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+        typeWriter();
+      </script>
+      <script>
+        window.onload = function(){
+        document.getElementById("faded").style.opacity = 1;
+        }
+      </script>
+  </body>
+</html>
