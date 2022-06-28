@@ -52,6 +52,7 @@ border: none;
 }
 
 a {
+font-family: "Montserrat";
 color: inherit;
 text-decoration: underline 1px rgba(255, 255, 255, 0);
 transition: text-decoration-color 300ms;
@@ -187,6 +188,13 @@ color: #fff
 
 b {
 font-family: "Montserrat";
+}
+
+.centered{
+display: block;
+margin-left: auto;
+margin-right: auto;
+text-align: center;
 }
 
 #faded{
