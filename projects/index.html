@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aakash Pirabu | Projects</title>
+    <link rel="icon" type="image/x-icon" href="/icons/favicon.ico">
+    <link rel="stylesheet" href="/styles/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <script src="/js/repo-card.js"></script>
+    <div id="content">
+    <h1 id="typed">
+    <a href="https://github.com/AnnikaV9"><img src="icons/github.png" style="width:32px" align="right" hspace="5"></a>
+    <a href="https://www.linkedin.com/in/aakash-pirabu-8976aa243"><img src="icons/linkedin.png" style="width:32px" align="right" hspace="5"></a>
+    <a href="mailto:aakash.pirabu.0@gmail.com"><img src="icons/mail.png" style="width:32px" align="right" hspace="5"></a></h1>
+    <div id="faded">
+    <br />
+    <h3>GITHUB REPOSITORIES</h3>
+    <br />
+    <div class="repo-card" data-repo="AnnikaV9/carrotsh" data-theme="dark-theme"></div>
+    <br />
+    <div class="repo-card" data-repo="AnnikaV9/kbuilder" data-theme="dark-theme"></div>
+    <br />
+    <div class="repo-card" data-repo="AnnikaV9/hcclient" data-theme="dark-theme"></div>
+    <br /><br />
+    <h3>WEBSITES</h3>
+    <p>
+    <ul>
+      <li><b><a href="https://duckduckgo-api.herokuapp.com">duckduckgo-api.herokuapp.com</a></b>
+      <br />A free and unofficial API for scraping DuckDuckGo's search results.</li>
+      <li><b><a href="https://carrotsh.herokuapp.com">carrotsh.herokuapp.com</a></b>
+      <br />Interactive demo for my remote access server (carrotsh) listed in the repositories section.</li>
+    </ul>
+    </p>
+    <br /><br />
+    <a href="/"><h3><img src="icons/home.png" style="width:16px"></h3></a>
+    </div>
+    </div>
+    <script>
+      var i = 0;
+      var txt = "PROJECTS";
+      var speed = 50;
+      function typeWriter() {
+          if (i < txt.length) {
+              document.getElementById("typed").innerHTML += txt.charAt(i);
+              i++;
+              setTimeout(typeWriter, speed);
+          }
+      }
+      typeWriter();
+    </script>
+    <script>
+      window.onload = function(){
+      document.getElementById("faded").style.opacity = 1;
+      }
+    </script>
+  </body>
+</html>
