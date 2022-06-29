@@ -1,51 +1,28 @@
-window.addEventListener('DOMContentLoaded', async function() {
-    const CACHE_TIMEOUT = 60000;
+window.addEventListener("DOMContentLoaded", async function() {
     async function get(url) {
-      const now = new Date().getTime();
-      const prevResp = JSON.parse(localStorage.getItem(url));
-      if (prevResp && Math.abs(now - prevResp.time) < CACHE_TIMEOUT) {
-        return prevResp.data;
-      }
       const resp = await fetch(url);
       const json = await resp.json();
-      localStorage.setItem(url, JSON.stringify({time: now, data: json}));
       return json;
     }
-  
-    const emojis = await get('https://api.github.com/emojis');
-    const colors = await get('https://raw.githubusercontent.com/ozh/github-colors/master/colors.json');
-  
-    const themes = {
-      'light-default': {
-        background: 'white',
-        borderColor: '#e1e4e8',
-        color: '#586069',
-        linkColor: '#0366d6',
-      },
-      'dark-theme': {
-        background: 'transparent',
-        borderColor: '#fff',
-        color: '#fff',
-        linkColor: '#fff',
-      }
-    };
-  
-    for (const el of document.querySelectorAll('.repo-card')) {
-      const name = el.getAttribute('data-repo');
-      const theme = themes[el.getAttribute('data-theme') || 'light-default'];
+    const emojis = await get("https://api.github.com/emojis");
+    const colors = await get("https://raw.githubusercontent.com/ozh/github-colors/master/colors.json");
+    for (const el of document.querySelectorAll(".repo-card")) {
+      const name = el.getAttribute("data-repo");
+      const theme = {
+        background: "transparent",
+        borderColor: "#fff",
+        color: "#fff",
+        linkColor: "#fff",
+      };
       const data = await get(`https://api.github.com/repos/${name}`);
-  
-      data.description = (data.description || '').replace(/:\w+:/g, function(match) {
+      data.description = (data.description || "").replace(/:\w+:/g, function(match) {
         const name = match.substring(1, match.length - 1);
         const emoji = emojis[name];
-  
         if (emoji) {
           return `<span><img src="${emoji}" style="width: 1rem; height: 1rem; vertical-align: -0.2rem;" alt="${name}"></span>`;
         }
-  
         return match;
       });
-  
       el.innerHTML = `
       <div style="font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji; border: 1px solid ${theme.borderColor}; border-radius: 1px; background: ${theme.background}; padding: 16px; font-size: 14px; line-height: 1.5; color: #24292e;">
         <div style="display: flex; align-items: center;">
