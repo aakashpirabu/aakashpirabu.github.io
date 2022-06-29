@@ -9,7 +9,6 @@ background-image: url("/images/background.gif");
 background-attachment: fixed;
 background-size: cover;
 background-position: center bottom;
-backdrop-filter: blur(20px);
 font: 400 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
 color: #000;
 background-color: #000;
@@ -41,6 +40,7 @@ padding-bottom: 20px;
 border-radius: 1px;
 margin-left: auto;
 margin-right: auto;
+opacity: 0.6;
 }
 
 hr {
