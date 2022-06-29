@@ -5,7 +5,7 @@ height: 100%;
 }
 
 body {
-background-image: url("background.gif");
+background-image: url("/images/background.gif");
 background-attachment: fixed;
 background-size: cover;
 font: 400 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
