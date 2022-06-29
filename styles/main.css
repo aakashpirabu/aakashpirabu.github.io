@@ -8,6 +8,7 @@ body {
 background-image: url("/images/background.gif");
 background-attachment: fixed;
 background-size: cover;
+background-position: center bottom;
 font: 400 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
 color: #000;
 background-color: #000;
