@@ -14,6 +14,12 @@ window.addEventListener("DOMContentLoaded", async function() {
         color: "#fff",
         linkColor: "#fff",
       };
+      el.innerHTML = `
+      <div style="font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji; border: 1px solid ${theme.borderColor}; border-radius: 1px; background: ${theme.background}; padding: 16px; font-size: 14px; line-height: 1.5; color: #24292e;">
+      <div style="display: flex; align-items: center;">
+      <h4>Loading...</h4>
+      </div></div>
+      `;
       const data = await get(`https://api.github.com/repos/${name}`);
       data.description = (data.description || "").replace(/:\w+:/g, function(match) {
         const name = match.substring(1, match.length - 1);
