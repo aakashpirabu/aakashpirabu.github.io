@@ -14,27 +14,129 @@
     <a href="https://www.linkedin.com/in/aakash-pirabu-8976aa243"><img src="/icons/linkedin.png" style="width:32px" align="right" hspace="5"></a>
     <a href="mailto:aakash.pirabu.0@gmail.com"><img src="/icons/mail.png" style="width:32px" align="right" hspace="5"></a></h1>
     <div id="faded">
+    <br /><br />
+    <a href="https://github.com/AnnikaV9/carrotsh"><h3>CARROTSH</h3></a>
     <br />
-    <h3>GITHUB REPOSITORIES</h3>
-    <br />
+    <iframe src="/pages/carrotsh.html" title="carrotsh" style="width:100%;height:300px;border:solid 1px"></iframe>
+    <br /><br />
     <div class="repo-card" data-repo="AnnikaV9/carrotsh"></div>
     <br />
+    <p>
+    carrotsh is a lightweight and secure remote access server that uses the websocket protocol. It provides a simple and accessible method of connecting to servers, as only a browser is required on the client side.
+    </p>
+    <p>
+    Languages:
+    <ul>
+    <li>Python</li>
+    <li>Javascript</li>
+    <li>HTML</li>
+    </ul>
+    </p>
+    <p>
+    Environments:
+    <ul>
+    <li>Node.js</li>
+    </ul>
+    </p>
+    <p>
+    Problems encountered:
+    <ul>
+    <li>The console would look weird when the client uses any sort of dark mode filters or extensions. This was solved by trial and error, trying different theme combinations and checking them with common dark mode filters like Dark Reader and Chromium's built-in filter. </li>
+    </ul>
+    </p>
+    <br /><br /><br />
+    <a href="https://github.com/AnnikaV9/kbuilder"><h3>KBUILDER</h3></a>
+    <br />
+    <iframe src="/pages/kbuilder.html" title="carrotsh" style="width:100%;height:300px;border:solid 1px"></iframe>
+    <br /><br />
     <div class="repo-card" data-repo="AnnikaV9/kbuilder"></div>
     <br />
-    <div class="repo-card" data-repo="AnnikaV9/hcclient"></div>
-    <br /><br />
-    <h3>WEBSITES</h3>
-    <br />
+    <p>
+    kbuilder is a bash script that automates the building, packaging and installing of custom kernels in Arch Linux. I wrote this for my own convenience, but also published it as a public package in the Arch User Repository in case someone else finds it useful.
+    </p>
+    <p>
+    Languages:
     <ul>
-      <li><b><a href="https://duckduckgo-api.herokuapp.com">duckduckgo-api.herokuapp.com</a></b>
-      <br />A free and unofficial API for scraping DuckDuckGo's search results.</li>
-      <br />
-      <li><b><a href="https://carrotsh.herokuapp.com">carrotsh.herokuapp.com</a></b>
-      <br />Interactive demo for my remote access server listed in the repositories section.</li>
-      <br />
-      <li><b><a href="https://aakashpirabu.github.io">aakashpirabu.github.io</a></b>
-      <br />This site, which is my digital portfolio.</li>
+    <li>Bash</li>
     </ul>
+    </p>
+    <p>
+    Problems encountered:
+    <ul>
+    <li>Updates to the official PKGBUILD on the Arch repositories occasionally made this script broken. This was solved by writing another script that checks the file everyday, updates the sed injection string to work with newer versions, automatically publishes it to the Arch User Repository and updates the source on the GitHub page.</li>
+    </ul>
+    </p>
+    <br /><br />
+    <a href="https://duckduckgo-api.herokuapp.com"><h3>DUCKDUCKAPI</h3></a>
+    <br />
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <img src="/images/duckduckapi1.png" style="width:100%;border:solid 1px">
+      </div>
+    
+      <div class="mySlides fade">
+        <img src="/images/duckduckapi2.png" style="width:100%;border:solid 1px">
+      </div>
+    
+      <div class="mySlides fade">
+        <img src="/images/duckduckapi3.png" style="width:100%;border:solid 1px">
+      </div>
+      &nbsp;<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>&nbsp;
+      <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+        }
+      </script>
+    </div>
+    <b><a href="https://duckduckgo-api.herokuapp.com">duckduckgo-api.herokuapp.com</a></b>
+    <br />
+    <p>
+    DuckDuckAPI is a free web scraping api for DuckDuckGo Search. The api allows you to fetch search results in JSON format, which can then be used by other programs or bots for various purposes. It has an easy interface, and is well documented. This project is closed source.
+    </p>
+    <p>
+    Languages:
+    <ul>
+    <li>Python</li>
+    <li>Javascript</li>
+    <li>Rust</li>
+    </ul>
+    </p>
+    <p>
+    Environments:
+    <ul>
+    <li>Node.js</li>
+    </ul>
+    </p>
+    <p>
+    Problems encountered:
+    <ul>
+    <li>The original backend scraper that was being used no longer worked due to updates to the DuckDuckGo search engine. This required a complete rewrite of the scraping rules, and the issue took about two days to hotfix.</li>
+    </ul>
+    </p>
     <br /><br />
     <a href="/"><h3><img src="/icons/home.png" style="width:16px"></h3></a>
     </div>
