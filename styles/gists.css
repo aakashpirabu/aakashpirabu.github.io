@@ -1,7 +1,6 @@
 .gist-data{
     height: 400px;
     width: 100%;
-    border: solid 1px;
     overflow-y: visible;
 }
 .gist-meta{
